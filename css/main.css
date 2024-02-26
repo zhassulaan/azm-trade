@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+main {
+  height: 80vh;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -5,16 +10,25 @@ html {
 body {
   display: block;
   width: 100%;
+  background-color: #F5F5F5;
   font-style: normal;
   margin: 0 auto;
 }
 
+input,
+button {
+  border: none;
+  outline: none;
+}
+
 h1, h2, h3, h4, h5, h6, p {
+  font-family: "Rubik", sans-serif;
   margin: 0;
 }
 
 p {
   line-height: 16px;
+  font-size: 12px;
   font-weight: 400;
 }
 
@@ -34,7 +48,7 @@ p {
   flex-direction: column;
 }
 
-.horizontal-inline,
+.inline,
 .center {
   align-items: center;
 }
@@ -43,8 +57,16 @@ p {
   justify-content: center;
 }
 
+.space {
+  justify-content: space-between;
+}
+
 .wrap {
   flex-wrap: wrap;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .header-top {
@@ -52,11 +74,93 @@ p {
   padding-top: 3px;
   padding-bottom: 4px;
 }
-.header-top .text {
+.header-top__line {
+  gap: 20px;
+}
+.header-top__line .text {
   font-size: 11px;
   color: #FFF;
 }
+.header-top__line .text#language {
+  line-height: 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.header-top__line .inline {
+  gap: 5px;
+}
+.header-bottom {
+  padding-top: 16px;
+}
 
-.footer {
-  display: block;
+.footer-top {
+  background-color: #959EAD;
+  padding-top: 52px;
+}
+.footer-bottom {
+  background-color: #004636;
+  padding-top: 16px;
+  padding-bottom: 19px;
+}
+.footer-bottom .text {
+  width: 666px;
+  color: #A7A7A7;
+  line-height: 10px;
+  font-size: 10px;
+}
+
+.button {
+  gap: 4px;
+  width: 100px;
+  height: 40px;
+  background-color: #959EAD;
+  border-radius: 35px;
+  cursor: pointer;
+}
+.button-text {
+  color: #FFF;
+}
+
+.search {
+  position: relative;
+  width: 559px;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  transform: translateY(-50%);
+}
+.search-input {
+  width: -webkit-fill-available;
+  line-height: 16px;
+  border: 1px solid #959EAD;
+  border-radius: 33px;
+  font-style: italic;
+  font-size: 12px;
+  color: #898989;
+  padding: 11px 30px;
+}
+.search-input::-moz-placeholder {
+  color: #898989;
+}
+.search-input::placeholder {
+  color: #898989;
+}
+
+.action {
+  gap: 2px;
+}
+.action_list {
+  gap: 24px;
+}
+.action-icon {
+  width: 22px;
+  height: 22px;
+  background-color: #959EAD;
+  border-radius: 50%;
+}
+.action-text {
+  color: #626262;
+  font-size: 10px;
 }/*# sourceMappingURL=main.css.map */
