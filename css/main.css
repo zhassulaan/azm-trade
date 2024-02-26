@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: block;
+  width: 100%;
+  font-style: normal;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+p {
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.box {
+  width: 1110px;
+  margin: auto;
+}
+
+.vertical,
+.horizontal,
+.center,
+.wrap {
+  display: flex;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.horizontal-inline,
+.center {
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.header-top {
+  background-color: #004636;
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+.header-top .text {
+  font-size: 11px;
+  color: #FFF;
+}
+
+.footer {
+  display: block;
+}/*# sourceMappingURL=main.css.map */
