@@ -1,5 +1,52 @@
 .home
+	.background
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+	.back
+		transform: rotate(180deg)
+	.hero,
+	.plan
+		position: relative
+	.hero
+		height: 217px
+		margin-top: 10px
+		border-radius: 20px
+		overflow: hidden
+		&-background,
+		.back,
+		.next,
+		&-content
+			position: absolute
+		.background
+			background: linear-gradient(to right, #00463650, #00463600)
+		.back,
+		.next
+			top: 50%
+			transform: translateY(-50%)
+		.back
+			left: 21px
+			transform: rotate(180deg)
+		.next
+			right: 21px
+		&-content
+			top: 10px
+			left: 80px
+			width: 158px
+			height: 139px
+			padding: 47px 0 0 28px
+			border-radius: 50%
+			background-color: #FF671F
+			color: $white
+			.title
+				margin-top: 3px
+				text-wrap: nowrap
+			.text
+				font-size: 15px
 	.popular,
+	.plan,
 	.recomendations,
 	.partners
 		margin-top: 53px
@@ -8,6 +55,87 @@
 	.popular
 		&-wrap
 			gap: 19px 17px
+	.interier
+		margin-top: 35px
+		&-wrap
+			gap: 4px
+			margin-top: 39px
+		&-header
+			padding: 30px 37px 31px
+			border-radius: 10px
+			background-color: #969EAB
+			.title
+				font-weight: 300
+				color: $white
+				text-transform: uppercase
+		&-box
+			position: relative
+			width: 367px
+			height: 368px
+			.background
+				background: linear-gradient(to top, #69717450, #69717400)
+			.text
+				position: absolute
+				left: 50%
+				bottom: 12px
+				font-weight: 400
+				line-height: 20px
+				color: $white
+				text-wrap: nowrap
+				transform: translateX(-50%)
+	.plan
+		height: 432px
+		border-radius: 10px
+		background-color: #EAE4E2
+		&-wrap
+			width: fit-content
+			margin: 0 auto
+			.title
+				padding: 13px 0
+				font-weight: 500
+				line-height: 36px
+				color: #4A505E
+			.button
+				width: 135px
+				height: 54px
+				outline: 1px solid $white
+				&-text
+					font-size: 18px
+					line-height: 21px
+		&-list
+			position: absolute
+			top: 40%
+			left: 72%
+			gap: 7px
+			transform: translate(-40%, -72%)
+			li::marker,
+			.text
+				color: #959EAD
+			.text
+				font-size: 15px
+		&-colors
+			margin-top: 13px
+			.color-1,
+			.color-2,
+			.color-3
+				width: 21px
+				height: 21px
+				border-radius: 50%
+			.color-1
+				margin-right: -4.5px
+				background-color: #B4BBC7
+			.color-2
+				z-index: 2
+				background-color: #4A505E
+			.color-3
+				margin-left: -4.5px
+				background-color: #9C857B
+		&-buttons
+			gap: 20px
+			margin: 23px 0
+			.text
+				font-size: 17px
+				color: $white
 	.recomendations
 		&-wrap
 			gap: 25px 17px

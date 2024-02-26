@@ -1,16 +1,179 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.home .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home .back {
+  transform: rotate(180deg);
+}
+.home .hero,
+.home .plan {
+  position: relative;
+}
+.home .hero {
+  height: 217px;
+  margin-top: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.home .hero-background,
+.home .hero .back,
+.home .hero .next, .home .hero-content {
+  position: absolute;
+}
+.home .hero .background {
+  background: linear-gradient(to right, rgba(0, 70, 54, 0.3137254902), rgba(0, 70, 54, 0));
+}
+.home .hero .back,
+.home .hero .next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.home .hero .back {
+  left: 21px;
+  transform: rotate(180deg);
+}
+.home .hero .next {
+  right: 21px;
+}
+.home .hero-content {
+  top: 10px;
+  left: 80px;
+  width: 158px;
+  height: 139px;
+  padding: 47px 0 0 28px;
+  border-radius: 50%;
+  background-color: #FF671F;
+  color: #FFF;
+}
+.home .hero-content .title {
+  margin-top: 3px;
+  text-wrap: nowrap;
+}
+.home .hero-content .text {
+  font-size: 15px;
+}
 .home .popular,
+.home .plan,
 .home .recomendations,
 .home .partners {
   margin-top: 53px;
 }
 .home .popular-wrap,
+.home .plan-wrap,
 .home .recomendations-wrap,
 .home .partners-wrap {
   margin-top: 31px;
 }
 .home .popular-wrap {
   gap: 19px 17px;
+}
+.home .interier {
+  margin-top: 35px;
+}
+.home .interier-wrap {
+  gap: 4px;
+  margin-top: 39px;
+}
+.home .interier-header {
+  padding: 30px 37px 31px;
+  border-radius: 10px;
+  background-color: #969EAB;
+}
+.home .interier-header .title {
+  font-weight: 300;
+  color: #FFF;
+  text-transform: uppercase;
+}
+.home .interier-box {
+  position: relative;
+  width: 367px;
+  height: 368px;
+}
+.home .interier-box .background {
+  background: linear-gradient(to top, rgba(105, 113, 116, 0.3137254902), rgba(105, 113, 116, 0));
+}
+.home .interier-box .text {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #FFF;
+  text-wrap: nowrap;
+  transform: translateX(-50%);
+}
+.home .plan {
+  height: 432px;
+  border-radius: 10px;
+  background-color: #EAE4E2;
+}
+.home .plan-wrap {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.home .plan-wrap .title {
+  padding: 13px 0;
+  font-weight: 500;
+  line-height: 36px;
+  color: #4A505E;
+}
+.home .plan-wrap .button {
+  width: 135px;
+  height: 54px;
+  outline: 1px solid #FFF;
+}
+.home .plan-wrap .button-text {
+  font-size: 18px;
+  line-height: 21px;
+}
+.home .plan-list {
+  position: absolute;
+  top: 40%;
+  left: 72%;
+  gap: 7px;
+  transform: translate(-40%, -72%);
+}
+.home .plan-list li::marker,
+.home .plan-list .text {
+  color: #959EAD;
+}
+.home .plan-list .text {
+  font-size: 15px;
+}
+.home .plan-colors {
+  margin-top: 13px;
+}
+.home .plan-colors .color-1,
+.home .plan-colors .color-2,
+.home .plan-colors .color-3 {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+}
+.home .plan-colors .color-1 {
+  margin-right: -4.5px;
+  background-color: #B4BBC7;
+}
+.home .plan-colors .color-2 {
+  z-index: 2;
+  background-color: #4A505E;
+}
+.home .plan-colors .color-3 {
+  margin-left: -4.5px;
+  background-color: #9C857B;
+}
+.home .plan-buttons {
+  gap: 20px;
+  margin: 23px 0;
+}
+.home .plan-buttons .text {
+  font-size: 17px;
+  color: #FFF;
 }
 .home .recomendations-wrap {
   gap: 25px 17px;
@@ -51,6 +214,12 @@ h1, h2, h3, h4, h5, h6, p {
   font-style: normal;
 }
 
+h1 {
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 36px;
+}
+
 h2 {
   font-weight: 400;
   font-size: 25px;
@@ -69,6 +238,10 @@ h3 {
 h4 {
   font-size: 15px;
   line-height: 20px;
+}
+
+h5 {
+  font-size: 20px;
 }
 
 p {
@@ -145,6 +318,7 @@ p {
 }
 .header-bottom .button {
   width: 100px;
+  height: 40px;
 }
 
 .footer-top {
@@ -201,7 +375,6 @@ p {
 
 .button {
   gap: 4px;
-  height: 40px;
   border-radius: 35px;
   background-color: #959EAD;
   cursor: pointer;
