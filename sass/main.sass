@@ -281,3 +281,18 @@ p
 			&-text
 				font-size: 14px
 				line-height: 20.62px
+
+.carousel
+	overflow-x: scroll
+	overflow-y: hidden
+	cursor: grab
+	&::-webkit-scrollbar
+		display: none
+	&.active
+		cursor: grabbing
+		cursor: -webkit-grabbing
+	&-inner
+		display: flex
+		align-items: center
+		gap: 40px
+		transition: all .3s

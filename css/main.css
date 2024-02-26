@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 .home .popular,
-.home .recomendations {
+.home .recomendations,
+.home .partners {
   margin-top: 53px;
 }
 .home .popular-wrap,
-.home .recomendations-wrap {
+.home .recomendations-wrap,
+.home .partners-wrap {
   margin-top: 31px;
 }
 .home .popular-wrap {
@@ -12,6 +14,9 @@
 }
 .home .recomendations-wrap {
   gap: 25px 17px;
+}
+.home .partners .carousel {
+  height: 70px;
 }
 
 html {
@@ -377,4 +382,23 @@ p {
 .card-box .button-text {
   font-size: 14px;
   line-height: 20.62px;
+}
+
+.carousel {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: grab;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transition: all 0.3s;
 }/*# sourceMappingURL=main.css.map */
