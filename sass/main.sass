@@ -6,13 +6,14 @@ main
 // General
 html
 	scroll-behavior: smooth
-
 body
 	display: block
 	width: 100%
 	margin: 0 auto
 	background-color: #F5F5F5
 	font-style: normal
+*
+	transition: all .3s ease-in-out
 
 input,
 button
@@ -25,6 +26,14 @@ h1, h2, h3, h4, h5, h6, p
 	font-family: $default-font
 	font-style: normal
 
+h3, h4
+	font-weight: 700
+h3
+	font-size: 16px
+	line-height: 20px
+h4
+	font-size: 15px
+	line-height: 20px
 p
 	font-weight: 400
 	font-size: 12px
@@ -52,6 +61,10 @@ p
 
 .btn
 	cursor: pointer
+.bigtext
+	overflow: hidden
+	display: -webkit-box
+	-webkit-box-orient: vertical
 
 // Layout
 .header
@@ -72,6 +85,8 @@ p
 				gap: 5px
 	&-bottom
 		padding-top: 16px
+		.button
+			width: 100px
 
 .footer
 	&-top
@@ -118,7 +133,6 @@ p
 // Components
 .button
 	gap: 4px
-	width: 100px
 	height: 40px
 	border-radius: 35px
 	background-color: $grey
@@ -158,3 +172,103 @@ p
 	&-text
 		font-size: 10px
 		color: #626262
+
+.card
+	position: relative
+	width: 208px
+	height: 381px
+	border-radius: 5px
+	background-color: $white
+	overflow: hidden
+	margin: 80px auto
+	&-galery
+		width: 100%
+		height: 208px
+		border-radius: 5px
+		background-color: #EDEDED
+		&__circle,
+		.image
+			position: absolute
+		&__circle
+			width: 104px
+			height: 104px
+			border-radius: 50%
+			background-color: #E6E6E6
+		.image
+			padding-top: 13px
+	&-like,
+	&-banner
+		position: absolute
+		z-index: 2
+	&-like
+		top: 7px
+		right: 8px
+		width: 34px
+		height: 34px
+		border-radius: 50%
+		.icon:last-child
+			display: none
+		&.active
+			background-color: #F7F7F7
+			.icon
+				&:first-child
+					display: none
+				&:last-child
+					display: block
+	&-banner
+		top: 8px
+		left: 0
+		height: max-content
+		&__info
+			position: absolute
+			top: 9px
+			left: 8px
+			gap: 8px
+			.text
+				font-size: 11px
+				color: $white
+	&-sale
+		position: absolute
+		top: 47%
+		right: 11.5px
+		width: 54px
+		height: 54px
+		border-radius: 50%
+		outline: 1px solid $white
+		background-color: #FFE0E0
+		color: #DEA9A9
+		.icon
+			position: absolute
+			top: 7.5px
+			right: 11.5px
+	&-box
+		width: 100%
+		height: 100%
+		margin: 11px 3px 4px
+		.description
+			font-size: 11px
+			color: #909090
+			line-height: 20px
+			-webkit-line-clamp: 1
+		.text
+			width: 170px
+			color: #3B3B3B
+			line-height: 19px
+			-webkit-line-clamp: 2
+		.title
+			margin-top: 12px
+			color: $green-secondary
+		.button
+			position: absolute
+			bottom: 4px
+			left: 3px
+			right: 3px
+			height: 32px
+			border-radius: 15px 15px 5px 5px
+			background-color: $green-secondary
+			gap: 13px
+			&:hover
+				background-color: $green
+			&-text
+				font-size: 14px
+				line-height: 20.62px
