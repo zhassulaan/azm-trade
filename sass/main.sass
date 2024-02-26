@@ -1,7 +1,7 @@
-main
-	height: 80vh
 @import fonts
 @import vars
+
+@import _pages/home
 
 // General
 html
@@ -26,6 +26,10 @@ h1, h2, h3, h4, h5, h6, p
 	font-family: $default-font
 	font-style: normal
 
+h2
+	font-weight: 400
+	font-size: 25px
+	line-height: 18px
 h3, h4
 	font-weight: 700
 h3
@@ -180,7 +184,6 @@ p
 	border-radius: 5px
 	background-color: $white
 	overflow: hidden
-	margin: 80px auto
 	&-galery
 		width: 100%
 		height: 208px
@@ -256,8 +259,14 @@ p
 			line-height: 19px
 			-webkit-line-clamp: 2
 		.title
-			margin-top: 12px
+			margin: 12px 0 10px
 			color: $green-secondary
+		&__statistics
+			gap: 15px
+			.rating
+				gap: 3px
+			.reviews
+				gap: 5px
 		.button
 			position: absolute
 			bottom: 4px

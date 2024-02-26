@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-main {
-  height: 80vh;
+.home .popular,
+.home .recomendations {
+  margin-top: 53px;
+}
+.home .popular-wrap,
+.home .recomendations-wrap {
+  margin-top: 31px;
+}
+.home .popular-wrap {
+  gap: 19px 17px;
+}
+.home .recomendations-wrap {
+  gap: 25px 17px;
 }
 
 html {
@@ -33,6 +44,12 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   font-family: "Rubik", sans-serif;
   font-style: normal;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 18px;
 }
 
 h3, h4 {
@@ -239,7 +256,6 @@ p {
   border-radius: 5px;
   background-color: #FFF;
   overflow: hidden;
-  margin: 80px auto;
 }
 .card-galery {
   width: 100%;
@@ -333,8 +349,17 @@ p {
   -webkit-line-clamp: 2;
 }
 .card-box .title {
-  margin-top: 12px;
+  margin: 12px 0 10px;
   color: #4D897B;
+}
+.card-box__statistics {
+  gap: 15px;
+}
+.card-box__statistics .rating {
+  gap: 3px;
+}
+.card-box__statistics .reviews {
+  gap: 5px;
 }
 .card-box .button {
   position: absolute;
