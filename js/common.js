@@ -3,6 +3,19 @@ const d = document;
 const $q = d.querySelectorAll.bind(d);
 const $g = d.querySelector.bind(d);
 
+// d.addEventListener("DOMContentLoaded", function() {
+// 	const textElement = $g('header-bottom__menu .text');
+// 	textElement.addEventListener('mouseenter', function() {
+// 		const dropdownElement = $g('.header-dropdown');
+// 		dropdownElement.style.display = 'block';
+// 	});
+
+// 	textElement.addEventListener('mouseleave', function() {
+// 		const dropdownElement = $g('.header-dropdown');
+// 		dropdownElement.style.display = 'none';
+// 	});
+// });
+
 // Like
 function handleLike(id) {
 	let card = $g(`#${id} .card-like`);
@@ -40,4 +53,16 @@ function dragSlider(id) {
 		const walk = (x - startX) * 3;
 		container.scrollLeft = scrollLeft - walk;
 	});
+}
+
+// Modal
+function handleModal(id) {
+	let modal = $g(`#${id}`);
+	if (modal.classList.length > 1) {
+		modal.classList.remove('show');
+		d.body.style.overflow = 'auto';
+	} else {
+		modal.classList.add('show');
+		d.body.style.overflow = 'hidden';
+	}
 }

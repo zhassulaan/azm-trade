@@ -1,4 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+}
+.modal-background, .modal-wrap {
+  position: fixed;
+}
+.modal-background {
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #004636;
+  opacity: 35%;
+}
+.modal-wrap {
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: #FFF;
+}
+
 .home .background {
   position: absolute;
   top: 0;
@@ -92,19 +122,28 @@
   position: relative;
   width: 367px;
   height: 368px;
+  overflow: hidden;
+}
+.home .interier-box:hover .background {
+  background: rgba(0, 70, 54, 0.3803921569);
+}
+.home .interier-box:hover .content {
+  top: 34px;
 }
 .home .interier-box .background {
   background: linear-gradient(to top, rgba(105, 113, 116, 0.3137254902), rgba(105, 113, 116, 0));
 }
-.home .interier-box .text {
+.home .interier-box .content {
   position: absolute;
   left: 50%;
-  bottom: 12px;
+  top: calc(100% - 32px);
+  transform: translateX(-50%);
+}
+.home .interier-box .content .text {
   font-weight: 400;
   line-height: 20px;
   color: #FFF;
   text-wrap: nowrap;
-  transform: translateX(-50%);
 }
 .home .plan {
   height: 432px;
@@ -204,6 +243,12 @@ button {
   outline: none;
 }
 
+ul,
+button {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -226,22 +271,28 @@ h2 {
   line-height: 18px;
 }
 
-h3, h4 {
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 23px;
+}
+
+h5, h6 {
   font-weight: 700;
 }
 
-h3 {
+h5 {
   font-size: 16px;
   line-height: 20px;
 }
 
-h4 {
+h6 {
   font-size: 15px;
   line-height: 20px;
-}
-
-h5 {
-  font-size: 20px;
 }
 
 p {
@@ -271,6 +322,10 @@ p {
   align-items: center;
 }
 
+.end {
+  align-items: end;
+}
+
 .center {
   justify-content: center;
 }
@@ -294,8 +349,7 @@ p {
 }
 
 .header-top {
-  padding-top: 3px;
-  padding-bottom: 4px;
+  padding: 3px 0 4px;
   background-color: #004636;
 }
 .header-top__line {
@@ -313,17 +367,108 @@ p {
 .header-top__line .inline {
   gap: 5px;
 }
-.header-bottom {
-  padding-top: 16px;
+.header-middle {
+  padding: 16px 0 27px;
 }
-.header-bottom .button {
+.header-middle .button {
   width: 100px;
   height: 40px;
 }
+.header-bottom__menu {
+  list-style: none;
+  gap: 30px;
+}
+.header-bottom__menu .text {
+  font-size: 13px;
+  color: #959EAD;
+}
+.header-bottom .button {
+  width: 190px;
+  height: 33px;
+  border-radius: 16.5px;
+  background-color: #DEA9A9;
+  padding: 2px 2px 2px 6px;
+}
+.header-bottom .button-text {
+  position: relative;
+  padding-left: 10px;
+  font-size: 13px;
+  line-height: 13px;
+  text-transform: uppercase;
+}
+.header-bottom .button-text::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: #FFF;
+  transform: translateY(-50%);
+}
+.header-bottom .button-icon {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: #FFE0E0;
+}
+.header-dropdown {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  background-color: #F5F5F5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+.header-dropdown__wrap {
+  margin-top: 15.5px;
+  padding: 10.5px 0 16px;
+  border-top: 1px solid #959EAD;
+}
+.header-dropdown__wrap .title {
+  font-weight: 300;
+  line-height: 28px;
+  color: #959EAD;
+}
+.header-dropdown__wrap .subtitle {
+  margin: 7px 0 20px;
+  color: #4C4F5E;
+}
+.header-dropdown__menu {
+  gap: 2px;
+  list-style: none;
+}
+.header-dropdown__menu .text {
+  line-height: 23px;
+  color: #959EAD;
+}
+.header-dropdown__menu .text::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: #4C4F5E;
+  transform: translateY(-50%);
+}
+.header-dropdown__menu .text:hover {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13px;
+  color: #4C4F5E;
+}
 
 .footer-top {
-  padding-top: 52px;
-  padding-bottom: 42px;
+  padding: 52px 0 42px;
   background-color: #959EAD;
 }
 .footer-top .text {
