@@ -33,7 +33,7 @@
 					<a href="#">
 						<p class="text">Алматы</p>
 					</a>
-					<a href="#" class="horizontal inline">
+					<a href="tel:+77010276354" class="horizontal inline">
 						<img src="assets/icons/phone.svg" alt="Phone" />
 						<p class="text">+7 (701) 027 63 54</p>
 					</a>
@@ -41,7 +41,7 @@
 			</div>
 		</div>
 
-		<div class="header-bottom">
+		<div class="header-middle">
 			<div class="box horizontal inline space">
 				<a href="/">
 					<img src="assets/icons/logo.svg" alt="Азия Мебель" />
@@ -54,12 +54,12 @@
 
 				<form action="" class="search">
 					<img src="assets/icons/search.svg" alt="Search" class="search-icon btn" />
-					<input type="text" placeholder="Что найти на сайте?" class="search-input" />
+					<input type="text" placeholder="Что найти на сайте?" class="input" />
 				</form>
 
 				<div class="action_list horizontal">
 					<div class="action vertical inline">
-						<a href="#" class="action-icon center">
+						<a href="#" class="action-icon center" onclick="handleModal('auth')">
 							<img src="assets/icons/user.svg" alt="Войти" />
 						</a>
 						<p class="action-text">Войти</p>
@@ -88,6 +88,80 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="header-bottom">
+			<div class="box">
+				<div class="horizontal end space">
+					<ul class="header-bottom__menu horizontal">
+						<li class="btn vertical inline">
+							<img src="assets/icons/fasteners.svg" alt="Направляющие" class="icon" />
+							<p class="text">Направляющие</p>
+						</li>
+						<li class="btn vertical inline">
+							<img src="assets/icons/fasteners.svg" alt="Петли и доводчики" class="icon" />
+							<p class="text">Петли и доводчики</p>
+						</li>
+						<li class="btn vertical inline">
+							<img src="assets/icons/fasteners.svg" alt="Крепежи" class="icon" />
+							<p class="text">Крепежи</p>
+						</li>
+						<li class="btn vertical inline">
+							<img src="assets/icons/fasteners.svg" alt="Система Джокер" class="icon" />
+							<p class="text">Система Джокер</p>
+						</li>
+						<li class="btn vertical inline">
+							<img src="assets/icons/fasteners.svg" alt="Ножки и опоры" class="icon" />
+							<p class="text">Ножки и опоры</p>
+						</li>
+						<li class="btn vertical inline">
+							<img src="assets/icons/fasteners.svg" alt="Системы петель" class="icon" />
+							<p class="text">Системы петель</p>
+						</li>
+						<li class="btn vertical inline">
+							<img src="assets/icons/fasteners.svg" alt="ЛДСП" class="icon" />
+							<p class="text">ЛДСП</p>
+						</li>
+					</ul>
+
+					<div class="dropdown">
+						<div class="dropdown-wrap box">
+							<h2 class="title">Крепежи</h2>
+							<h4 class="subtitle">Крепёжная и стяжная</h4>
+							<ul class="dropdown-menu vertical">
+								<li><a href="#">
+									<p class="text">Конфирмат</p>
+								</a></li>
+								<li><a href="#">
+									<p class="text">Шканты</p>
+								</a></li>
+								<li><a href="#">
+									<p class="text">Колёсики</p>
+								</a></li>
+								<li><a href="#">
+									<p class="text">Ножки</p>
+								</a></li>
+								<li><a href="#">
+									<p class="text">Петли</p>
+								</a></li>
+								<li><a href="#">
+									<p class="text">Евровинт</p>
+								</a></li>
+								<li><a href="#">
+									<p class="text">Саморезы и шурупы</p>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<button class="button horizontal inline space">
+						<p class="button-text">Включить cкидки</p>
+						<div class="button-icon center">
+							<img src="assets/icons/sale-white.svg" alt="Sale" />
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
 	</header>
 
 	<!-- MAIN -->
@@ -113,7 +187,7 @@
 				<div class="popular-wrap wrap">
 					<div id="card-1" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item1.png" alt="Item 1" class="image" />
 						</a>
 
@@ -153,13 +227,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -181,7 +257,7 @@
 
 					<div id="card-2" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item2.png" alt="Item 2" class="image" />
 						</a>
 
@@ -221,13 +297,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -249,7 +327,7 @@
 
 					<div id="card-3" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item3.png" alt="Item 3" class="image" />
 						</a>
 
@@ -289,13 +367,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -317,7 +397,7 @@
 
 					<div id="card-4" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item4.png" alt="Item 4" class="image" />
 						</a>
 
@@ -357,13 +437,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -385,7 +467,7 @@
 
 					<div id="card-5" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item5.png" alt="Item 5" class="image" />
 						</a>
 
@@ -425,13 +507,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -453,7 +537,7 @@
 
 					<div id="card-6" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item6.png" alt="Item 6" class="image" />
 						</a>
 
@@ -493,13 +577,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -521,7 +607,7 @@
 
 					<div id="card-7" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item7.png" alt="Item 7" class="image" />
 						</a>
 
@@ -561,13 +647,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -589,7 +677,7 @@
 
 					<div id="card-8" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item8.png" alt="Item 8" class="image" />
 						</a>
 
@@ -629,13 +717,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -657,7 +747,7 @@
 
 					<div id="card-9" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item9.png" alt="Item 9" class="image" />
 						</a>
 
@@ -697,13 +787,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -725,7 +817,7 @@
 
 					<div id="card-10" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item2.png" alt="Item 10" class="image" />
 						</a>
 
@@ -765,13 +857,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -793,7 +887,7 @@
 
 					<div id="card-11" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item6.png" alt="Item 11" class="image" />
 						</a>
 
@@ -833,13 +927,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -861,7 +957,7 @@
 
 					<div id="card-12" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item7.png" alt="Item 12" class="image" />
 						</a>
 
@@ -901,13 +997,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -929,7 +1027,7 @@
 
 					<div id="card-13" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item8.png" alt="Item 13" class="image" />
 						</a>
 
@@ -969,13 +1067,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -997,7 +1097,7 @@
 
 					<div id="card-14" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item9.png" alt="Item 14" class="image" />
 						</a>
 
@@ -1037,13 +1137,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1065,7 +1167,7 @@
 
 					<div id="card-15" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item2.png" alt="Item 15" class="image" />
 						</a>
 
@@ -1105,13 +1207,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1139,42 +1243,174 @@
 				</div>
 
 				<div class="interier-wrap wrap">
-					<div class="interier-box">
+					<div class="interier-box btn">
 						<img src="assets/images/furnitures/living-room.png" alt="Гостинные" />
 						<div class="background"></div>
-						<h5 class="text">Гостинные</h5>
+						<div class="content">
+							<h3 class="title">Гостинные</h3>
+							<ul class="content-menu vertical">
+								<li>
+									<p class="text">замки</p>
+								</li>
+								<li>
+									<p class="text">крючки</p>
+								</li>
+								<li>
+									<p class="text">ручки</p>
+								</li>
+								<li>
+									<p class="text">полкодержатели</p>
+								</li>
+								<li>
+									<p class="text">крепления</p>
+								</li>
+								<li>
+									<p class="text">направляющие</p>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div class="interier-box">
+					<div class="interier-box btn">
 						<img src="assets/images/furnitures/kitchen.png" alt="Мебель для кухни" />
 						<div class="background"></div>
-						<h5 class="text">Мебель для кухни</h5>
+						<div class="content">
+							<h3 class="title">Мебель для кухни</h3>
+							<ul class="content-menu vertical">
+								<li>
+									<p class="text">замки</p>
+								</li>
+								<li>
+									<p class="text">крючки</p>
+								</li>
+								<li>
+									<p class="text">ручки</p>
+								</li>
+								<li>
+									<p class="text">полкодержатели</p>
+								</li>
+								<li>
+									<p class="text">крепления</p>
+								</li>
+								<li>
+									<p class="text">направляющие</p>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div class="interier-box">
+					<div class="interier-box btn">
 						<img src="assets/images/furnitures/office.png" alt="Офисная мебель" />
 						<div class="background"></div>
-						<h5 class="text">Офисная мебель</h5>
+						<div class="content">
+							<h3 class="title">Офисная мебель</h3>
+							<ul class="content-menu vertical">
+								<li>
+									<p class="text">замки</p>
+								</li>
+								<li>
+									<p class="text">крючки</p>
+								</li>
+								<li>
+									<p class="text">ручки</p>
+								</li>
+								<li>
+									<p class="text">полкодержатели</p>
+								</li>
+								<li>
+									<p class="text">крепления</p>
+								</li>
+								<li>
+									<p class="text">направляющие</p>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div class="interier-box">
+					<div class="interier-box btn">
 						<img src="assets/images/furnitures/children.png" alt="Детская мебель" />
 						<div class="background"></div>
-						<h5 class="text">Детская мебель</h5>
+						<div class="content">
+							<h3 class="title">Детская мебель</h3>
+							<ul class="content-menu vertical">
+								<li>
+									<p class="text">замки</p>
+								</li>
+								<li>
+									<p class="text">крючки</p>
+								</li>
+								<li>
+									<p class="text">ручки</p>
+								</li>
+								<li>
+									<p class="text">полкодержатели</p>
+								</li>
+								<li>
+									<p class="text">крепления</p>
+								</li>
+								<li>
+									<p class="text">направляющие</p>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div class="interier-box">
+					<div class="interier-box btn">
 						<img src="assets/images/furnitures/hallway.png" alt="Прихожие" />
 						<div class="background"></div>
-						<h5 class="text">Прихожие</h5>
+						<div class="content">
+							<h3 class="title">Прихожие</h3>
+							<ul class="content-menu vertical">
+								<li>
+									<p class="text">замки</p>
+								</li>
+								<li>
+									<p class="text">крючки</p>
+								</li>
+								<li>
+									<p class="text">ручки</p>
+								</li>
+								<li>
+									<p class="text">полкодержатели</p>
+								</li>
+								<li>
+									<p class="text">крепления</p>
+								</li>
+								<li>
+									<p class="text">направляющие</p>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div class="interier-box">
+					<div class="interier-box btn">
 						<img src="assets/images/furnitures/bedroom.png" alt="Мебель для спальни" />
 						<div class="background"></div>
-						<h5 class="text">Мебель для спальни</h5>
+						<div class="content">
+							<h3 class="title">Мебель для спальни</h3>
+							<ul class="content-menu vertical">
+								<li>
+									<p class="text">замки</p>
+								</li>
+								<li>
+									<p class="text">крючки</p>
+								</li>
+								<li>
+									<p class="text">ручки</p>
+								</li>
+								<li>
+									<p class="text">полкодержатели</p>
+								</li>
+								<li>
+									<p class="text">крепления</p>
+								</li>
+								<li>
+									<p class="text">направляющие</p>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<section class="plan">
 				<div class="plan-wrap vertical inline">
-					<h5 class="title">Сделай так, как тебе нравится</h5>
+					<h3 class="title">Сделай так, как тебе нравится</h3>
 					<img src="assets/images/furniture.png" alt="Furniture" />
 
 					<ul class="plan-list vertical">
@@ -1204,13 +1440,13 @@
 			<section class="recomendations">
 				<h2>Рекомендуем</h2>
 				<div class="recomendations-wrap wrap">
-					<div id="card-1" class="card">
+					<div id="card-16" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item1.png" alt="Item 1" class="image" />
 						</a>
 
-						<div class="card-like center btn" onclick="handleLike('card-1')">
+						<div class="card-like center btn" onclick="handleLike('card-16')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1246,13 +1482,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1272,13 +1510,13 @@
 						</div>
 					</div>
 
-					<div id="card-2" class="card">
+					<div id="card-17" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item2.png" alt="Item 2" class="image" />
 						</a>
 
-						<div class="card-like center btn active" onclick="handleLike('card-2')">
+						<div class="card-like center btn active" onclick="handleLike('card-17')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1314,13 +1552,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1340,13 +1580,13 @@
 						</div>
 					</div>
 
-					<div id="card-3" class="card">
+					<div id="card-18" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item3.png" alt="Item 3" class="image" />
 						</a>
 
-						<div class="card-like center btn" onclick="handleLike('card-3')">
+						<div class="card-like center btn" onclick="handleLike('card-18')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1382,13 +1622,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1408,13 +1650,13 @@
 						</div>
 					</div>
 
-					<div id="card-4" class="card">
+					<div id="card-19" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item4.png" alt="Item 4" class="image" />
 						</a>
 
-						<div class="card-like center btn" onclick="handleLike('card-4')">
+						<div class="card-like center btn" onclick="handleLike('card-19')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1450,13 +1692,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1476,13 +1720,13 @@
 						</div>
 					</div>
 
-					<div id="card-5" class="card">
+					<div id="card-20" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item5.png" alt="Item 5" class="image" />
 						</a>
 
-						<div class="card-like center btn" onclick="handleLike('card-5')">
+						<div class="card-like center btn" onclick="handleLike('card-20')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1518,13 +1762,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1544,13 +1790,13 @@
 						</div>
 					</div>
 
-					<div id="card-6" class="card">
+					<div id="card-21" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item6.png" alt="Item 6" class="image" />
 						</a>
 
-						<div class="card-like center btn active" onclick="handleLike('card-6')">
+						<div class="card-like center btn active" onclick="handleLike('card-21')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1586,13 +1832,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1612,13 +1860,13 @@
 						</div>
 					</div>
 
-					<div id="card-7" class="card">
+					<div id="card-22" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item7.png" alt="Item 7" class="image" />
 						</a>
 
-						<div class="card-like center btn" onclick="handleLike('card-7')">
+						<div class="card-like center btn" onclick="handleLike('card-22')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1654,13 +1902,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1680,13 +1930,13 @@
 						</div>
 					</div>
 
-					<div id="card-8" class="card">
+					<div id="card-23" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item8.png" alt="Item 8" class="image" />
 						</a>
 
-						<div class="card-like center btn" onclick="handleLike('card-8')">
+						<div class="card-like center btn" onclick="handleLike('card-23')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1722,13 +1972,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1748,13 +2000,13 @@
 						</div>
 					</div>
 
-					<div id="card-9" class="card">
+					<div id="card-24" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item9.png" alt="Item 9" class="image" />
 						</a>
 
-						<div class="card-like center btn" onclick="handleLike('card-9')">
+						<div class="card-like center btn" onclick="handleLike('card-24')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1790,13 +2042,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -1816,13 +2070,13 @@
 						</div>
 					</div>
 
-					<div id="card-10" class="card">
+					<div id="card-25" class="card">
 						<a href="#" class="card-galery center">
-							<div class="card-galery__circle"></div>
+							<div class="circle"></div>
 							<img src="assets/images/catalog/item2.png" alt="Item 10" class="image" />
 						</a>
 
-						<div class="card-like center btn active" onclick="handleLike('card-10')">
+						<div class="card-like center btn active" onclick="handleLike('card-25')">
 							<img src="assets/icons/favourite/default.svg" alt="Favourite" class="icon" />
 							<img src="assets/icons/favourite/active.svg" alt="Favourite" class="icon" />
 						</div>
@@ -1858,13 +2112,15 @@
 
 						<div class="card-sale center">
 							<img src="assets/icons/sale.svg" alt="Sale" class="icon" />
-							<h4>SALE</h4>
+							<h6>SALE</h6>
 						</div>
 
 						<div class="card-box">
 							<p class="description bigtext">Мебельные дверцы</p>
-							<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
-							<h3 class="title">1 410 тг.</h3>
+							<a href="#">
+								<p class="text bigtext">Замок мебельный врезной 39x40 мм, Китай EMS</p>
+							</a>
+							<h5 class="title">1 410 тг.</h5>
 
 							<div class="card-box__statistics horizontal">
 								<div class="rating horizontal inline">
@@ -2056,5 +2312,27 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- MODAL -->
+	<div id="auth" class="modal">
+		<div class="modal-background" onclick="handleModal('auth')"></div>
+		<div class="modal-content vertical inline">
+			<div class="close center btn" onclick="handleModal('auth')">
+				<img src="assets/icons/close.svg" alt="Close" />
+			</div>
+			
+			<h3 class="title">Войти или создать профиль</h3>
+			<img src="assets/icons/logo.svg" alt="Азия Меблеь" class="image" />
+			<input type="text" placeholder="+7()" class="input" />
+
+			<button class="button">
+				<p class="button-text">Получить код</p>
+			</button>
+			<div class="modal-content__footer horizontal inline">
+				<input type="checkbox" class="checkbox" />
+				<p class="text">Соглашаюсь с правилами пользования торговой площадкой и возврата</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

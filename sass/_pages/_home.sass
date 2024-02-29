@@ -34,8 +34,8 @@
 		&-content
 			top: 10px
 			left: 80px
-			width: 158px
-			height: 139px
+			width: 186px
+			height: 186px
 			padding: 47px 0 0 28px
 			border-radius: 50%
 			background-color: #FF671F
@@ -72,17 +72,58 @@
 			position: relative
 			width: 367px
 			height: 368px
+			overflow: hidden
+			&:hover
+				.background
+					background: #00463661
+				.content
+					top: 34px
+			.background,
+			.content
+				transition: all .3s ease-in-out
 			.background
 				background: linear-gradient(to top, #69717450, #69717400)
-			.text
+			.content
 				position: absolute
-				left: 50%
-				bottom: 12px
-				font-weight: 400
-				line-height: 20px
-				color: $white
-				text-wrap: nowrap
-				transform: translateX(-50%)
+				top: calc(100% - 32px)
+				width: 100%
+				.title,
+				.text
+					color: $white
+					text-wrap: nowrap
+					text-align: center
+				.title
+					font-weight: 400
+					line-height: 16px
+				&-menu
+					gap: 12px
+					margin-top: 70px
+					.text
+						position: relative
+						font-size: 14px
+						transition: all .3s ease-in-out
+						&::before,
+						&::after
+							@include hide
+							position: absolute
+							top: 50%
+							content: ""
+							width: 19px
+							height: 1px
+							background-color: $white
+							transform: translateY(-50%)
+						&::before
+							margin-left: -40px
+						&::after
+							margin-left: 21px
+						&:hover
+							font-size: 15px
+							text-transform: uppercase
+							line-height: 21px
+							margin: -3px 0 -2px
+							&::before,
+							&::after
+								@include show
 	.plan
 		height: 432px
 		border-radius: 10px
@@ -101,16 +142,16 @@
 				outline: 1px solid $white
 				&-text
 					font-size: 18px
-					line-height: 21px
 		&-list
 			position: absolute
 			top: 40%
 			left: 72%
 			gap: 7px
 			transform: translate(-40%, -72%)
+			list-style: disc
 			li::marker,
 			.text
-				color: #959EAD
+				color: $grey
 			.text
 				font-size: 15px
 		&-colors

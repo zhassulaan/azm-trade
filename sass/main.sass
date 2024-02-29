@@ -1,6 +1,8 @@
 @import fonts
 @import vars
+@import mixins
 
+@import _modals
 @import _pages/home
 
 // General
@@ -13,12 +15,18 @@ body
 	background-color: #F5F5F5
 	font-style: normal
 *
-	transition: all .3s ease-in-out
+	box-sizing: border-box
 
 input,
 button
 	border: none
 	outline: none
+ul,
+button
+	margin: 0
+	padding: 0
+ul
+	list-style: none
 a
 	text-decoration: none
 h1, h2, h3, h4, h5, h6, p
@@ -34,16 +42,20 @@ h2
 	font-weight: 400
 	font-size: 25px
 	line-height: 18px
-h3, h4
-	font-weight: 700
 h3
+	font-size: 20px
+h4
+	font-weight: 500
+	font-size: 19px
+	line-height: 23px
+h5, h6
+	font-weight: 700
+h5
 	font-size: 16px
 	line-height: 20px
-h4
+h6
 	font-size: 15px
 	line-height: 20px
-h5
-	font-size: 20px
 p
 	font-weight: 400
 	font-size: 12px
@@ -62,6 +74,8 @@ p
 .inline,
 .center
 	align-items: center
+.end
+	align-items: end
 .center
 	justify-content: center
 .space
@@ -71,6 +85,7 @@ p
 
 .btn
 	cursor: pointer
+	padding: 0
 .bigtext
 	overflow: hidden
 	display: -webkit-box
@@ -79,8 +94,7 @@ p
 // Layout
 .header
 	&-top
-		padding-top: 3px
-		padding-bottom: 4px
+		padding: 3px 0 4px
 		background-color: $green
 		&__line
 			gap: 20px
@@ -93,16 +107,107 @@ p
 					line-height: 14px
 			.inline
 				gap: 5px
-	&-bottom
-		padding-top: 16px
+	&-middle
+		padding: 16px 0 15px
 		.button
 			width: 100px
 			height: 40px
-
+	&-bottom
+		position: relative
+		&__menu
+			gap: 30px
+			&:hover ~ .dropdown
+				@include show
+			.btn
+				&:hover
+					.icon
+						@include show
+				.text
+					font-size: 13px
+					color: $grey-menu
+				.icon
+					@include hide
+		.dropdown
+			@include hide
+			position: absolute
+			top: 41px
+			left: 0
+			width: 100vw
+			background-color: #F5F5F5
+			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .1)
+			z-index: 3
+			&:hover
+				@include show
+			&-wrap
+				margin-top: 15.5px
+				padding: 10.5px 0 16px
+				border-top: 1px solid $grey
+				.title
+					font-weight: 300
+					line-height: 28px
+					color: $grey
+				.subtitle
+					margin: 7px 0 20px
+					color: #4C4F5E
+			&-menu
+				gap: 2px
+				.text
+					position: relative
+					line-height: 23px
+					color: $grey-menu
+					&::before
+						@include hide
+						position: absolute
+						top: 50%
+						left: 0
+						content: ""
+						display: inline-block
+						width: 5px
+						height: 5px
+						border-radius: 50%
+						-moz-border-radius: 50%
+						-webkit-border-radius: 50%
+						background-color: #4C4F5E
+						transform: translateY(-50%)
+					&:hover
+						position: relative
+						padding-left: 16px
+						font-size: 13px
+						color: #4C4F5E
+						&::before
+							@include show
+		.button
+			width: 190px
+			height: 33px
+			border-radius: 16.5px
+			background-color: $pink
+			padding: 2px 2px 2px 6px
+			&-text
+				position: relative
+				padding-left: 10px
+				line-height: 13px
+				text-transform: uppercase
+				&::before
+					position: absolute
+					top: 50%
+					left: 0
+					content: ""
+					display: inline-block
+					width: 6px
+					height: 6px
+					border-radius: 50%
+					-moz-border-radius: 50%
+					-webkit-border-radius: 50%
+					background-color: $white
+					transform: translateY(-50%)
+			&-icon
+				width: 29px
+				height: 29px
+				border-radius: 50%
+				background-color: $pink-light
 .footer
 	&-top
-		padding-top: 52px
-		padding-bottom: 42px
+		padding: 52px 0 42px
 		background-color: $grey
 		.text
 			color: $white
@@ -138,7 +243,7 @@ p
 		.text
 			width: 666px
 			font-size: 10px
-			color: #A7A7A7
+			color: $grey-light
 			line-height: 10px
 
 // Components
@@ -148,7 +253,43 @@ p
 	background-color: $grey
 	cursor: pointer
 	&-text
+		line-height: 21px
 		color: $white
+
+.input
+	height: 40px
+	padding: 11px 30px
+	border: 1px solid $grey
+	border-radius: 33px
+	font-size: 20px
+	color: #898989
+	line-height: 16px
+	&::placeholder
+		color: #898989
+
+.checkbox
+	cursor: pointer
+	-moz-appearance: none
+	-webkit-appearance: none
+	-o-appearance: none
+	margin: 0
+	outline: none
+	content: none
+	&::before
+		content: "✔"
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 21px
+		height: 21px
+		border: 1px solid $white
+		border-radius: 5px
+		font-size: 15px
+		color: transparent !important
+		box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, .17)
+	&:checked::before
+		color: black !important
+		margin: auto
 
 .search
 	position: relative
@@ -158,29 +299,24 @@ p
 		top: 50%
 		left: 11px
 		transform: translateY(-50%)
-	&-input
+	.input
 		width: -webkit-fill-available
-		padding: 11px 30px
-		border: 1px solid $grey
-		border-radius: 33px
 		font-style: italic
 		font-size: 12px
-		color: #898989
-		line-height: 16px
-		&::placeholder
-			color: #898989
 
 .action
-	gap: 2px
+	gap: 6px
 	&_list
-		gap: 24px
+		gap: 18px
+		margin-top: 3px
 	&-icon
-		width: 22px
-		height: 22px
+		width: 24px
+		height: 24px
 		border-radius: 50%
 		background-color: $grey
 	&-text
 		font-size: 10px
+		line-height: 11px
 		color: #626262
 
 .card
@@ -190,25 +326,32 @@ p
 	border-radius: 5px
 	background-color: $white
 	overflow: hidden
+	&:hover .circle
+		width: 146px
+		height: 146px
+		background-color: $orange
 	&-galery
 		width: 100%
-		height: 208px
+		min-height: 208px
 		border-radius: 5px
 		background-color: #EDEDED
-		&__circle,
+		.circle,
 		.image
 			position: absolute
-		&__circle
+		.circle
 			width: 104px
 			height: 104px
 			border-radius: 50%
 			background-color: #E6E6E6
+			transition: all .3s ease-in-out
 		.image
 			padding-top: 13px
 	&-like,
 	&-banner
 		position: absolute
-		z-index: 2
+	&-like,
+	.button
+		transition: all .3s ease-in-out
 	&-like
 		top: 7px
 		right: 8px
@@ -244,8 +387,8 @@ p
 		height: 54px
 		border-radius: 50%
 		outline: 1px solid $white
-		background-color: #FFE0E0
-		color: #DEA9A9
+		background-color: $pink-light
+		color: $pink
 		.icon
 			position: absolute
 			top: 7.5px
@@ -266,7 +409,7 @@ p
 			-webkit-line-clamp: 2
 		.title
 			margin: 12px 0 10px
-			color: $green-secondary
+			color: $green-light
 		&__statistics
 			gap: 15px
 			.rating
@@ -280,13 +423,12 @@ p
 			right: 3px
 			height: 32px
 			border-radius: 15px 15px 5px 5px
-			background-color: $green-secondary
+			background-color: $green-light
 			gap: 13px
 			&:hover
 				background-color: $green
 			&-text
 				font-size: 14px
-				line-height: 20.62px
 
 .carousel
 	overflow-x: scroll

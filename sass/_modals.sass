@@ -1,0 +1,57 @@
+.show
+	@include show
+
+.modal
+	@include hide
+	&-background,
+	&-content
+		position: fixed
+		z-index: 5
+	&-background 
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $green
+		opacity: 35%
+	&-content
+		top: 50%
+		left: 50%
+		z-index: 6
+		transform: translate(-50%, -50%)
+		background-color: #F2F1EF
+		.close
+			position: absolute
+
+#auth
+	.modal-content
+		width: 461px
+		height: 401px
+		padding: 72px 75px 42px 76px
+		.close
+			top: 25px
+			right: 22px
+			width: 36px
+			height: 36px
+		.title
+			text-align: center
+			font-weight: 400
+			line-height: 18px
+		.image
+			min-height: 29px
+			margin: 37px 0
+		.input,
+		.button
+			width: 100%
+		.button
+			min-height: 46px
+			margin: 30px 0 29px
+			&-text
+				font-size: 14px
+		&__footer
+			gap: 14px
+			.text
+				width: 75%
+				font-size: 10px
+				line-height: 10px
+				color: $grey-light
