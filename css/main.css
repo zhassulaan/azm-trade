@@ -94,9 +94,7 @@
   border-radius: 20px;
   overflow: hidden;
 }
-.home .hero-background,
-.home .hero .back,
-.home .hero .next, .home .hero-content {
+.home .hero-background, .home .hero-content {
   position: absolute;
 }
 .home .hero .background {
@@ -104,6 +102,7 @@
 }
 .home .hero .back,
 .home .hero .next {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -133,35 +132,31 @@
 }
 .home .popular,
 .home .plan,
-.home .recomendations,
-.home .partners {
+.home .recomendations {
   margin-top: 53px;
 }
 .home .popular-wrap,
 .home .plan-wrap,
-.home .recomendations-wrap,
-.home .partners-wrap {
+.home .recomendations-wrap {
   margin-top: 31px;
 }
 .home .popular-wrap {
   gap: 19px 17px;
 }
-.home .interier {
+.home .question {
+  padding: 30px 37px 31px;
+  border-radius: 10px;
+  background-color: #969EAB;
   margin-top: 35px;
+}
+.home .question .title {
+  font-weight: 300;
+  color: #FFF;
+  text-transform: uppercase;
 }
 .home .interier-wrap {
   gap: 4px;
   margin-top: 39px;
-}
-.home .interier-header {
-  padding: 30px 37px 31px;
-  border-radius: 10px;
-  background-color: #969EAB;
-}
-.home .interier-header .title {
-  font-weight: 300;
-  color: #FFF;
-  text-transform: uppercase;
 }
 .home .interier-box {
   position: relative;
@@ -212,11 +207,11 @@
   transition: all 0.2s ease-in-out;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   content: "";
   width: 19px;
   height: 1px;
   background-color: #FFF;
-  transform: translateY(-50%);
 }
 .home .interier-box .content-menu .text::before {
   margin-left: -40px;
@@ -306,8 +301,51 @@
 .home .recomendations-wrap {
   gap: 25px 17px;
 }
-.home .partners .carousel {
+.home .partners {
+  margin-top: 53px;
+}
+.home .partners-wrap {
   height: 70px;
+  margin-top: 31px;
+}
+
+.filter .content {
+  margin-top: 30px;
+}
+.filter .content-wrap {
+  margin-top: 32px;
+}
+.filter .content-filter {
+  width: 209px;
+}
+.filter .content-result {
+  gap: 19px 17px;
+  width: 883px;
+}
+.filter .popular {
+  margin-top: 53px;
+}
+.filter .popular-wrap {
+  gap: 19px 17px;
+  margin-top: 31px;
+}
+.filter .question {
+  padding: 30px 37px 31px;
+  border-radius: 10px;
+  background-color: #969EAB;
+  margin-top: 37px;
+}
+.filter .question .title {
+  font-weight: 300;
+  color: #FFF;
+  text-transform: uppercase;
+}
+.filter .partners {
+  margin-top: 35px;
+}
+.filter .partners-wrap {
+  height: 70px;
+  margin-top: 31px;
 }
 
 html {
@@ -462,7 +500,7 @@ p {
   gap: 5px;
 }
 .header-middle {
-  padding: 16px 0 15px;
+  padding: 16px 0;
 }
 .header-middle .button {
   width: 100px;
@@ -530,11 +568,9 @@ p {
   color: #6E6E6E;
 }
 .header-bottom .dropdown-menu .text::before {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   left: 0;
   content: "";
   display: inline-block;
@@ -543,8 +579,10 @@ p {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
   background-color: #4C4F5E;
-  transform: translateY(-50%);
 }
 .header-bottom .dropdown-menu .text:hover {
   position: relative;
@@ -556,12 +594,20 @@ p {
   visibility: visible !important;
   opacity: 1 !important;
 }
+.header-bottom .dropdown-image {
+  width: 230px;
+  height: 230px;
+  margin-top: 21px;
+  border-radius: 16px;
+  background-color: #E6E6E6;
+}
 .header-bottom .button {
   width: 190px;
   height: 33px;
+  margin-bottom: 1px;
+  padding: 2px 2px 2px 6px;
   border-radius: 16.5px;
   background-color: #DEA9A9;
-  padding: 2px 2px 2px 6px;
 }
 .header-bottom .button-text {
   position: relative;
@@ -572,16 +618,16 @@ p {
 .header-bottom .button-text::before {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   left: 0;
   content: "";
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   background-color: #FFF;
-  transform: translateY(-50%);
 }
 .header-bottom .button-icon {
   width: 29px;
@@ -702,8 +748,8 @@ p {
 .search-icon {
   position: absolute;
   top: 50%;
-  left: 11px;
   transform: translateY(-50%);
+  left: 11px;
 }
 .search .input {
   width: -webkit-fill-available;
@@ -822,8 +868,6 @@ p {
   right: 11.5px;
 }
 .card-box {
-  width: 100%;
-  height: 100%;
   margin: 11px 3px 4px;
 }
 .card-box .description {

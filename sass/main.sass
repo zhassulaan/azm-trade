@@ -4,6 +4,7 @@
 
 @import _modals
 @import _pages/home
+@import _pages/filter
 
 // General
 html
@@ -12,7 +13,7 @@ body
 	display: block
 	width: 100%
 	margin: 0 auto
-	background-color: #F5F5F5
+	background-color: $background
 	font-style: normal
 *
 	box-sizing: border-box
@@ -108,7 +109,7 @@ p
 			.inline
 				gap: 5px
 	&-middle
-		padding: 16px 0 15px
+		padding: 16px 0
 		.button
 			width: 100px
 			height: 40px
@@ -133,7 +134,7 @@ p
 			top: 41px
 			left: 0
 			width: 100vw
-			background-color: #F5F5F5
+			background-color: $background
 			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .1)
 			z-index: 3
 			&:hover
@@ -156,19 +157,9 @@ p
 					line-height: 23px
 					color: $grey-menu
 					&::before
+						@include dot
 						@include hide
-						position: absolute
-						top: 50%
-						left: 0
-						content: ""
-						display: inline-block
-						width: 5px
-						height: 5px
-						border-radius: 50%
-						-moz-border-radius: 50%
-						-webkit-border-radius: 50%
 						background-color: #4C4F5E
-						transform: translateY(-50%)
 					&:hover
 						position: relative
 						padding-left: 16px
@@ -176,30 +167,27 @@ p
 						color: #4C4F5E
 						&::before
 							@include show
+			&-image
+				width: 230px
+				height: 230px
+				margin-top: 21px
+				border-radius: 16px
+				background-color: $grey-shape
 		.button
 			width: 190px
 			height: 33px
+			margin-bottom: 1px
+			padding: 2px 2px 2px 6px
 			border-radius: 16.5px
 			background-color: $pink
-			padding: 2px 2px 2px 6px
 			&-text
 				position: relative
 				padding-left: 10px
 				line-height: 13px
 				text-transform: uppercase
 				&::before
-					position: absolute
-					top: 50%
-					left: 0
-					content: ""
-					display: inline-block
-					width: 6px
-					height: 6px
-					border-radius: 50%
-					-moz-border-radius: 50%
-					-webkit-border-radius: 50%
+					@include dot
 					background-color: $white
-					transform: translateY(-50%)
 			&-icon
 				width: 29px
 				height: 29px
@@ -295,10 +283,8 @@ p
 	position: relative
 	width: 559px
 	&-icon
-		position: absolute
-		top: 50%
+		@include center
 		left: 11px
-		transform: translateY(-50%)
 	.input
 		width: -webkit-fill-available
 		font-style: italic
@@ -342,7 +328,7 @@ p
 			width: 104px
 			height: 104px
 			border-radius: 50%
-			background-color: #E6E6E6
+			background-color: $grey-shape
 			transition: all .3s ease-in-out
 		.image
 			padding-top: 13px
@@ -394,8 +380,6 @@ p
 			top: 7.5px
 			right: 11.5px
 	&-box
-		width: 100%
-		height: 100%
 		margin: 11px 3px 4px
 		.description
 			font-size: 11px
@@ -444,3 +428,5 @@ p
 		align-items: center
 		gap: 40px
 		transition: all .3s
+
+// input rules, caruosel homepage x2, menu:hover icon (dropdown), header fixed, links, lang, locations
