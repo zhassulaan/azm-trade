@@ -2,7 +2,9 @@
 @import vars
 @import mixins
 
-@import _modals
+@import _layouts/header
+@import _layouts/footer
+@import _layouts/modals
 @import _pages/home
 @import _pages/filter
 
@@ -91,148 +93,6 @@ p
 	overflow: hidden
 	display: -webkit-box
 	-webkit-box-orient: vertical
-
-// Layout
-.header
-	&-top
-		padding: 3px 0 4px
-		background-color: $green
-		&__line
-			gap: 20px
-			.text
-				font-size: 11px
-				color: $white
-				&#language
-					font-weight: 600
-					font-size: 12px
-					line-height: 14px
-			.inline
-				gap: 5px
-	&-middle
-		padding: 16px 0
-		.button
-			width: 100px
-			height: 40px
-	&-bottom
-		position: relative
-		&__menu
-			gap: 30px
-			&:hover ~ .dropdown
-				@include show
-			.btn
-				&:hover
-					.icon
-						@include show
-				.text
-					font-size: 13px
-					color: $grey-menu
-				.icon
-					@include hide
-		.dropdown
-			@include hide
-			position: absolute
-			top: 41px
-			left: 0
-			width: 100vw
-			background-color: $background
-			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .1)
-			z-index: 3
-			&:hover
-				@include show
-			&-wrap
-				margin-top: 15.5px
-				padding: 10.5px 0 16px
-				border-top: 1px solid $grey
-				.title
-					font-weight: 300
-					line-height: 28px
-					color: $grey
-				.subtitle
-					margin: 7px 0 20px
-					color: #4C4F5E
-			&-menu
-				gap: 2px
-				.text
-					position: relative
-					line-height: 23px
-					color: $grey-menu
-					&::before
-						@include dot
-						@include hide
-						background-color: #4C4F5E
-					&:hover
-						position: relative
-						padding-left: 16px
-						font-size: 13px
-						color: #4C4F5E
-						&::before
-							@include show
-			&-image
-				width: 230px
-				height: 230px
-				margin-top: 21px
-				border-radius: 16px
-				background-color: $grey-shape
-		.button
-			width: 190px
-			height: 33px
-			margin-bottom: 1px
-			padding: 2px 2px 2px 6px
-			border-radius: 16.5px
-			background-color: $pink
-			&-text
-				position: relative
-				padding-left: 10px
-				line-height: 13px
-				text-transform: uppercase
-				&::before
-					@include dot
-					background-color: $white
-			&-icon
-				width: 29px
-				height: 29px
-				border-radius: 50%
-				background-color: $pink-light
-.footer
-	&-top
-		padding: 52px 0 42px
-		background-color: $grey
-		.text
-			color: $white
-			font-size: 13px
-			line-height: 24px
-	&-box,
-	&-icon
-		background-color: #848E9E
-	&-box
-		width: 269px
-		padding: 7px 7px 7px 20px
-		border-radius: 5px
-		.text
-			font-size: 12px
-			line-height: 19px
-	&-info
-		width: 222px
-		&__icon
-			height: 24px
-		.text
-			margin-left: 10px
-	&-socials
-		gap: 12px
-		margin-top: 22px
-		&__icon
-			width: 28px
-			height: 28px
-			border-radius: 50%
-	&-bottom
-		padding-top: 16px
-		padding-bottom: 19px
-		background-color: $green
-		.text
-			width: 666px
-			font-size: 10px
-			color: $grey-light
-			line-height: 10px
 
 // Components
 .button
