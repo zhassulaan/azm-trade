@@ -1,14 +1,21 @@
 .filter
-	.background
-		position: absolute
-		@include background
-	.back
-		transform: rotate(180deg)
-	.popular,
+	.content
+		margin-top: 30px
+		&-wrap
+			margin-top: 32px
+		&-filter
+			width: 209px
+		&-result
+			gap: 19px 17px
+			width: 883px
+	.popular
 		margin-top: 53px
 		&-wrap
 			gap: 19px 17px
 			margin-top: 31px
+	.question
+		@include question
+		margin-top: 37px
 	.partners
-		margin-top: 35px
 		@include partners
+		margin-top: 35px
